@@ -170,9 +170,9 @@ footer p{margin:.5rem 0;font-size:.9rem;color:var(--stone-dim)}
 /* ───────── music toggle ───────── */
 #spine{pointer-events:none}
 #bgm-toggle{
-  position:absolute;left:var(--gut);top:50%;transform:translateY(-50%);
+  position:fixed;right:var(--gut);bottom:clamp(1rem,3vh,2rem);z-index:60;
   pointer-events:auto;display:inline-flex;align-items:center;gap:.55rem;
-  background:rgba(20,30,25,.5);border:1px solid rgba(218,214,201,.28);
+  background:rgba(20,30,25,.72);border:1px solid rgba(218,214,201,.34);
   color:var(--stone);font-family:var(--mono);font-size:.62rem;
   letter-spacing:.16em;text-transform:uppercase;
   padding:.44rem .74rem;cursor:pointer;
