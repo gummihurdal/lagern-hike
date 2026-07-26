@@ -12,9 +12,9 @@
   const VIDEO_CAP  = 30000;     // ms failsafe if a clip never fires 'ended'
 
   let frames = [];
-  let running = false;
+  let running = false, paused = false;
   let idx = 0;
-  let timer = null;
+  let timer = null, tStart = 0, tLeft = 0, rafId = null;
   let cleanupVideo = null;
 
   /* ---------- controls ---------- */
@@ -28,6 +28,13 @@
         '<rect x="14" y="5" width="4" height="14"></rect></g>' +
       '</svg><span id="pres-label">Play presentation</span></button>' +
     '<span id="pres-count" hidden></span>';
+  const prog = document.createElement('div');
+  prog.id = 'pres-progress'; prog.innerHTML = '<i></i>';
+  document.body.appendChild(prog);
+  const bead = prog.firstChild;
+  const badge = document.createElement('div');
+  badge.id = 'pres-paused'; badge.textContent = 'Paused'; badge.hidden = true;
+  document.body.appendChild(badge);
   document.body.appendChild(bar);
 
   const btn   = bar.querySelector('#pres-toggle');
@@ -48,6 +55,11 @@
     fig.scrollIntoView({ block: 'center', behavior: 'smooth' });
     fig.classList.add('pres-on');
     frames.forEach((f, n) => { if (n !== i) f.classList.remove('pres-on'); });
+
+    for (let k = 1; k <= 3; k++) {
+      const im = frames[i + k] && frames[i + k].querySelector('img');
+      if (im && im.dataset.warm !== '1') { im.dataset.warm = '1'; const g = new Image(); g.src = im.src; }
+    }
 
     /* warm up the next clip so it's ready when we reach it */
     const nxt = frames[i + 1] && frames[i + 1].querySelector('video');
@@ -81,12 +93,46 @@
           });
       }, SETTLE);
     } else {
-      const hold = parseInt(fig.dataset.dwell, 10) || PHOTO_HOLD;
-      timer = setTimeout(() => { if (running) next(); }, SETTLE + hold);
+      const hold = (parseInt(fig.dataset.dwell, 10) || PHOTO_HOLD) + SETTLE;
+      startHold(hold);
+    }
+  }
+
+  function startHold(ms) {
+    tLeft = ms; tStart = performance.now();
+    timer = setTimeout(() => { if (running) next(); }, ms);
+    cancelAnimationFrame(rafId);
+    const tick = () => {
+      if (!running) return;
+      if (!paused) {
+        const pct = Math.min(1, (performance.now() - tStart) / ms);
+        bead.style.transform = 'scaleX(' + pct + ')';
+      }
+      rafId = requestAnimationFrame(tick);
+    };
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function togglePause() {
+    if (!running) return;
+    paused = !paused;
+    badge.hidden = !paused;
+    document.documentElement.classList.toggle('pres-paused', paused);
+    const vid = frames[idx] && frames[idx].querySelector('video');
+    if (paused) {
+      clearTimeout(timer);
+      tLeft = Math.max(0, tLeft - (performance.now() - tStart));
+      if (vid) vid.pause();
+      if (window.BGM) window.BGM.off();
+    } else {
+      if (window.BGM && window.BGM.available()) window.BGM.on();
+      if (vid) { vid.play().catch(() => {}); }
+      else { tStart = performance.now(); timer = setTimeout(() => { if (running) next(); }, tLeft); }
     }
   }
 
   const next = () => { clear(); idx + 1 < frames.length ? show(idx + 1) : stop(true); };
+  const prev = () => { clear(); show(Math.max(0, idx - 1)); };
 
   let unlocked = false;
   function unlockVideos() {
@@ -122,7 +168,11 @@
   }
 
   function stop(finished) {
-    running = false;
+    running = false; paused = false;
+    cancelAnimationFrame(rafId);
+    badge.hidden = true;
+    document.documentElement.classList.remove('pres-paused');
+    bead.style.transform = 'scaleX(0)';
     clear();
     bar.classList.remove('playing');
     label.textContent = finished ? 'Play again' : 'Play presentation';
@@ -138,9 +188,14 @@
 
   /* escape, or leaving fullscreen, ends it */
   document.addEventListener('keydown', e => {
-    if (!running) return;
+    if (!running) {
+      if (e.code === 'Space') { e.preventDefault(); start(); }
+      return;
+    }
     if (e.key === 'Escape') stop();
-    if (e.key === 'ArrowRight') next();
+    else if (e.key === 'ArrowRight') next();
+    else if (e.key === 'ArrowLeft') prev();
+    else if (e.code === 'Space') { e.preventDefault(); togglePause(); }
   });
   document.addEventListener('fullscreenchange', () => {
     if (running && !document.fullscreenElement) stop();

@@ -291,3 +291,29 @@ html.presenting .chapter-head,html.presenting .prologue{opacity:.3;transition:op
   color:var(--campanula);display:flex;gap:.55rem;flex-wrap:wrap;align-items:baseline;
 }
 .pullquote footer span{color:var(--stone-dim);text-transform:none;letter-spacing:.04em;font-style:italic}
+
+/* ───────── presentation: progress, pause, polish ───────── */
+#pres-progress{
+  position:fixed;top:0;left:0;right:0;height:2px;z-index:80;
+  background:rgba(218,214,201,.10);opacity:0;transition:opacity .4s;pointer-events:none;
+}
+html.presenting #pres-progress{opacity:1}
+#pres-progress i{
+  display:block;height:100%;width:100%;transform:scaleX(0);transform-origin:left;
+  background:var(--campanula);
+}
+#pres-paused{
+  position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:80;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--stone);background:rgba(20,30,25,.86);border:1px solid rgba(218,214,201,.35);
+  padding:.9rem 1.6rem;backdrop-filter:blur(8px);pointer-events:none;
+}
+html.pres-paused #pres-progress i{background:var(--haze)}
+
+/* during playback the current frame gets room to breathe */
+html.presenting body{background:#0E1512}
+html.presenting .frames{gap:0}
+html.presenting figure.pres-on .shot::after{box-shadow:none}
+html.presenting figcaption,html.presenting .pullquote{opacity:0;transition:opacity .45s ease .15s}
+html.presenting figure.pres-on figcaption,
+html.presenting figure.pres-on .pullquote{opacity:1}
