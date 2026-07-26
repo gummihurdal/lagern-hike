@@ -3,10 +3,11 @@
 Photo and video presentation of the Lägerngrat traverse, Saturday 25 July 2026.
 Baden to Regensberg, the length of the crest.
 
-| Leg | Distance |
+| Leg | |
 |---|---|
-| Brown Boveri Strasse → Ennetbaden → Schartenfels trailhead | ~2 km |
-| Trailhead → Lägern Hochwacht (859 m), west to east along the crest | ~9 km |
+| Brown Boveri Strasse → Baden old town → Promenadenlift (−27 m) → Holzbrücke → Ennetbaden | ~2 km |
+| Felsenegg stairs → Schloss Schartenfels | +100 m |
+| Schartenfels → the crest, west to east → Lägern Hochwacht (859 m) | ~9 km |
 | Hochwacht → Regensberg, Dorf bus stop (617 m) | ~2.5 km |
 | **Total** | **~13.5 km, ≈650 m ascent, 5 h+ walking** |
 
@@ -16,7 +17,10 @@ sharpest frame of each burst.
 
 ## Route confirmed
 
-- **Approach** — Schartenfels, the steeper line, not the gentler Baldegg route.
+- **Approach** — Schartenfels, the steeper line, not the gentler Baldegg route. Reached
+  on foot from Brown Boveri Strasse through Baden's old town, down the Promenadenlift to
+  the Limmat, across the Holzbrücke into Ennetbaden, then up the Felsenegg stairs. The
+  ridge proper begins behind the castle.
 - **Finish** — Regensberg, Dorf bus stop (near the Löwen), not continuing down to
   Dielsdorf station. Regensberg ZH, at the east end of the Lägern — not
   Regensburg, Bavaria.
