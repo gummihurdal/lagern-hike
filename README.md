@@ -5,21 +5,25 @@ Baden to Regensberg, the length of the crest.
 
 | Leg | Distance |
 |---|---|
-| Brown Boveri Strasse → Ennetbaden / Schartenfels trailhead | ~2 km |
+| Brown Boveri Strasse → Ennetbaden → Schartenfels trailhead | ~2 km |
 | Trailhead → Lägern Hochwacht (859 m), west to east along the crest | ~9 km |
-| Hochwacht → Regensberg village (617 m) | ~2.5 km |
-| **Total** | **~13.5 km, 5 h+ walking** |
+| Hochwacht → Regensberg, Dorf bus stop (617 m) | ~2.5 km |
+| **Total** | **~13.5 km, ≈650 m ascent, 5 h+ walking** |
 
 76 stills and 9 clips, from 88 stills and 9 clips originally. Twelve
 near-identical burst frames were removed by perceptual hash, keeping the
 sharpest frame of each burst.
 
-## Two numbers still open
+## Route confirmed
 
-The total would tighten with answers to:
+- **Approach** — Schartenfels, the steeper line, not the gentler Baldegg route.
+- **Finish** — Regensberg, Dorf bus stop (near the Löwen), not continuing down to
+  Dielsdorf station. Regensberg ZH, at the east end of the Lägern — not
+  Regensburg, Bavaria.
 
-- **Approach** — Schartenfels, or the gentler Baldegg route?
-- **Finish** — Regensberg Dorf, or on down to Dielsdorf station?
+Ascent of ≈650 m is approximate. Published figures for the same traverse walked
+Dielsdorf → Baden give roughly +610 m / −660 m; taken this way round, from Baden,
+the larger figure becomes the climb.
 
 ## A note on the elevation profile
 
