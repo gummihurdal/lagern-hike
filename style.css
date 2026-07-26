@@ -347,3 +347,13 @@ html.presenting figure.pres-on .pullquote{opacity:1}
   margin:1.6rem 0 0;line-height:1.7;
 }
 .card-credit em{font-style:italic;color:var(--stone)}
+
+/* ───────── iOS safe areas ───────── */
+#spine{
+  height:calc(64px + env(safe-area-inset-top,0px));
+  padding-top:env(safe-area-inset-top,0px);
+}
+#profile{height:64px}
+#pres-bar{top:calc(clamp(.6rem,2vh,1.1rem) + env(safe-area-inset-top,0px))}
+#pres-progress{top:env(safe-area-inset-top,0px)}
+#bgm-toggle{bottom:calc(clamp(1rem,3vh,2rem) + env(safe-area-inset-bottom,0px))}

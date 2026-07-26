@@ -8,7 +8,7 @@ window.CAPTIONS = {
   "2026-07-25 11-08-13": "Eight past eleven, 470 metres, and already off the tarmac. The Lägern doesn't bother with a warm-up — the path leaves Baden and goes straight up through the oaks.",
   "2026-07-25 11-27-28": "Twenty minutes of climbing in and the ground has turned to rubble. This is the Lägern's calling card: broken Jurassic limestone, most of it loose.",
   "2026-07-25 11-28-12": "The path narrows onto the flank. White rock, dry grass, and a fairly persuasive drop on the right.",
-  "2026-07-25 11-32-25": "Roots doing the work of stairs.",
+  "2026-07-25 11-32-25": "Four minutes after the sighing, and not a sound out of her. Roots doing the work of stairs, and she goes up them like they are nothing. Easy, as it turns out.",
   "2026-07-25 11-38-06": "First proper gap in the canopy. The plain below is already going hazy in the heat.",
   "2026-07-25 11-39-17": "Slow motion, because a rock slab this smooth deserves it. Shot at 120 frames a second.",
 
