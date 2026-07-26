@@ -25,7 +25,7 @@ window.CAPTIONS = {
   // ── The narrow bit ──────────────────────────────────────────────
   "2026-07-25 12-13-22": "Standing on the crest with air on both sides.",
   "2026-07-25 12-13-29": "Sky overhead, oak leaves, and not much width to spare.",
-  "2026-07-25 12-13-59": "Walking the rock. No hands needed here, but you do watch your feet.",
+  "2026-07-25 12-13-59": "A long sigh, and then, twice, with feeling: &ldquo;There is no way. There is <em>no way</em>.&rdquo; She walks it anyway. No hands needed along here, but you do watch your feet.",
   "2026-07-25 12-15-11": "The rib steepens. Tilted strata, laid down as seabed and stood on end since.",
   "2026-07-25 12-15-13": "Same rib, and you can read the bedding in the stone.",
   "2026-07-25 12-15-16": "Looking straight down into the treetops.",
