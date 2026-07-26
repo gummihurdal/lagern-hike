@@ -134,3 +134,20 @@ Object.assign(window.QUOTES, {
   "2026-07-25 14-36-47": { t: "The morning wind forever blows, the poem of creation is uninterrupted; but few are the ears that hear it.", a: "Henry David Thoreau", s: "Walden" },
   "2026-07-25 15-34-42": { t: "By them shall the fowls of the heaven have their habitation, which sing among the branches.", a: "Psalm 104:12", s: "King James Bible" }
 });
+
+/* The flower and berry close-ups. These hold 2s longer in presentation mode. */
+window.PLANT_FRAMES = [
+ "2026-07-25 11-54-09",
+ "2026-07-25 11-54-17",
+ "2026-07-25 11-54-27",
+ "2026-07-25 11-54-37",
+ "2026-07-25 11-58-50",
+ "2026-07-25 12-40-48",
+ "2026-07-25 12-49-09",
+ "2026-07-25 13-54-21",
+ "2026-07-25 13-54-30",
+ "2026-07-25 14-29-33",
+ "2026-07-25 14-29-34",
+ "2026-07-25 14-29-35",
+ "2026-07-25 14-29-37 (2)"
+];

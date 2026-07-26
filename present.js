@@ -81,7 +81,8 @@
           });
       }, SETTLE);
     } else {
-      timer = setTimeout(() => { if (running) next(); }, SETTLE + PHOTO_HOLD);
+      const hold = parseInt(fig.dataset.dwell, 10) || PHOTO_HOLD;
+      timer = setTimeout(() => { if (running) next(); }, SETTLE + hold);
     }
   }
 

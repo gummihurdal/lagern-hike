@@ -36,6 +36,7 @@
       fig.dataset.alt = it.alt;
       fig.dataset.time = it.time;
       fig.dataset.video = it.video ? '1' : '';
+      fig.dataset.id = it.id;
 
       const shot = document.createElement('div');
       shot.className = 'shot';
@@ -72,6 +73,21 @@
         (it.lat ? `<span>${it.lat.toFixed(4)}, ${it.lon.toFixed(4)}</span>` : '') +
         `</div>` + (text ? `<p>${text}</p>` : '');
       fig.appendChild(cap);
+
+      /* Dwell is proportional to reading load: a long psalm gets longer on
+         screen than a short line. The flower and berry close-ups get an extra
+         beat on top — they're the ones worth sitting with. */
+      if (!it.video) {
+        const strip = s => String(s).replace(/&[a-z]+;/g, 'x').replace(/<[^>]+>/g, ' ');
+        const qq = (window.QUOTES || {})[it.id];
+        const cc = (window.CAPTIONS || {})[it.id];
+        let words = 0;
+        if (qq) words += strip(qq.t).trim().split(/\s+/).length;
+        if (cc) words += strip(cc).trim().split(/\s+/).length;
+        let ms = Math.min(12000, Math.max(5500, 3000 + words * 400));
+        if ((window.PLANT_FRAMES || []).indexOf(it.id) >= 0) ms += 2000;
+        fig.dataset.dwell = ms;
+      }
 
       const q = (window.QUOTES || {})[it.id];
       if (q) {
