@@ -73,7 +73,7 @@ Object.assign(window.CAPTIONS, {
   "2026-07-25 12-16-46": "One arm out for balance, picking her way down the awkward bit &mdash; and this is where she delivers the line of the day: &ldquo;Every man who would marry me is like winning in the lottery.&rdquo;",
   "2026-07-25 11-28-12": "Twenty minutes in, and you can hear her sighing. At this point the route still looked like more than she had signed up for &mdash; the path narrowing onto the flank, white rock underfoot, a persuasive drop on the right. She was on the crest at 12:13 and at the high point by half past one.",
   "2026-07-25 11-27-29": "11:27, 604 m &mdash; the climb out of Baden, oak woodland and loose limestone.",
-  "2026-07-25 12-22-55": "12:22, 764 m &mdash; the narrow section, bare limestone, air on both sides.",
+  "2026-07-25 12-22-55": "Nine minutes after &ldquo;there is no way,&rdquo; this. Up on the narrow section with the whole plain behind her, grinning, lit up &mdash; and the hard part of the morning suddenly worth it.",
   "2026-07-25 12-27-19": "12:27, 756 m &mdash; the narrow section, bare limestone, air on both sides.",
   "2026-07-25 12-27-22": "12:27, 757 m &mdash; the narrow section, bare limestone, air on both sides.",
   "2026-07-25 12-29-20": "12:29, 756 m &mdash; the narrow section, bare limestone, air on both sides.",
