@@ -59,3 +59,13 @@ window.QUOTES = {
   "2026-07-25 14-29-35": { t: "The things of nature are the Lord&rsquo;s silent ministers, given to us to teach us spiritual truths.", a: "Ellen G. White", s: "" },
   "2026-07-25 14-29-37 (2)": { t: "Nature and revelation alike testify of God&rsquo;s love. Our Father in heaven is the source of life, of wisdom, and of joy.", a: "Ellen G. White", s: "Steps to Christ, ch. 1" }
 };
+
+/* The remaining well-sourced lines from the collection, placed on the open
+   frames — the astronomy quotes want sky, Muir wants the ridge. */
+Object.assign(window.QUOTES, {
+  "2026-07-25 12-15-18": { t: "The mountains are fountains of men as well as of rivers, of glaciers, of fertile soil.", a: "John Muir", s: "Our National Parks" },
+  "2026-07-25 12-22-47": { t: "I only went out for a walk, and finally concluded to stay out till sundown; for going out, I found, was really going in.", a: "John Muir", s: "journal, 1913" },
+  "2026-07-25 13-10-36": { t: "The laws of nature are within the grasp of the human mind. God wanted us to recognise them by creating us in his image, so that we could share in his own thoughts.", a: "Johannes Kepler", s: "letter to Herwart von Hohenburg, 1599" },
+  "2026-07-25 13-11-51": { t: "Astronomers are priests of the highest God in regard to the book of nature.", a: "Johannes Kepler", s: "" },
+  "2026-07-25 13-24-12": { t: "This most beautiful system of sun, planets and comets could only proceed from the counsel and dominion of an intelligent and powerful Being.", a: "Isaac Newton", s: "Principia, General Scholium" }
+});
