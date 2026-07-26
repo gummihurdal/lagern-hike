@@ -134,6 +134,9 @@ figcaption .meta{
 figcaption .meta b{color:var(--campanula);font-weight:500}
 figcaption p{margin:0;font-size:1rem;color:#E6E2D8}
 figcaption.bare .meta{margin-bottom:0}
+/* her spoken lines on the video clips — set in bold caps */
+figcaption p .said{font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#F2EFE7}
+figcaption p .said em{font-style:italic}
 
 /* two-up on wide screens for portrait pairs */
 @media(min-width:900px){
