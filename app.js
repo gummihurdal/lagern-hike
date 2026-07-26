@@ -1,5 +1,5 @@
 (async function () {
-  const data = await fetch('data.json?v=202607261810').then(r => r.json());
+  const data = await fetch('data.json?v=202607261816').then(r => r.json());
   const { chapters, items } = data;
   const CAP = window.CAPTIONS || {};
   const story = document.getElementById('story');
@@ -111,7 +111,7 @@
 
   document.getElementById('footStats').textContent =
     `${items.length} frames · ${items.filter(i => i.video).length} clips · ` +
-    `first 11:08 at 470 m · last 15:34 at 839 m`;
+    `first 11:08 at 470 m · last 16:52 on the way down`;
 
   /* ---------- elevation profile ---------- */
   const pts = items.map((it, i) => ({ x: i / (items.length - 1), a: it.alt }));
