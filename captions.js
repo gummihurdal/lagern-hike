@@ -10,7 +10,7 @@ window.CAPTIONS = {
   "2026-07-25 11-28-12": "The path narrows onto the flank. White rock, dry grass, and a fairly persuasive drop on the right.",
   "2026-07-25 11-32-25": "Four minutes after the sighing, and not a sound out of her. Roots doing the work of stairs, and she goes up them like they are nothing. Easy, as it turns out.",
   "2026-07-25 11-38-06": "A long sigh, loud enough for the microphone &mdash; and then she spots the camera. &ldquo;Oh no, stop it.&rdquo; Behind her, the first proper gap in the canopy, and the plain already going hazy in the heat.",
-  "2026-07-25 11-39-17": "Slow motion, because a rock slab this smooth deserves it. Shot at 120 frames a second.",
+  "2026-07-25 11-39-17": "Another sigh, and then the verdict: &ldquo;Can we not go somewhere like this next time?&rdquo; Shot at 120 frames a second, so the slab she is objecting to gets the slow motion it deserves.",
 
   // ── Onto the crest ──────────────────────────────────────────────
   "2026-07-25 11-54-09": "Campanula, growing straight out of the limestone chippings. This violet turns up all along the ridge and it ended up being the accent colour of this whole page.",
