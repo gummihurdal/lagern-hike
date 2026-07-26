@@ -35,6 +35,7 @@
       fig.className = 'rise' + (it.video ? ' full' : '');
       fig.dataset.alt = it.alt;
       fig.dataset.time = it.time;
+      fig.dataset.video = it.video ? '1' : '';
 
       const shot = document.createElement('div');
       shot.className = 'shot';
@@ -129,6 +130,9 @@
       cursor.setAttribute('x1', x); cursor.setAttribute('x2', x);
       roAlt.textContent = Math.round(e.target.dataset.alt) + ' m';
       roTime.textContent = e.target.dataset.time;
+      document.dispatchEvent(new CustomEvent('frame', {
+        detail: { isVideo: e.target.dataset.video === '1' }
+      }));
     });
   }, { rootMargin: '-45% 0px -45% 0px' });
   sections.forEach(s => track.observe(s));

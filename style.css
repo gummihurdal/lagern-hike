@@ -166,3 +166,26 @@ footer p{margin:.5rem 0;font-size:.9rem;color:var(--stone-dim)}
   .rise{opacity:1;transform:none;transition:none}
   #spine{transition:none}
 }
+
+/* ───────── music toggle ───────── */
+#spine{pointer-events:none}
+#bgm-toggle{
+  position:absolute;left:var(--gut);top:50%;transform:translateY(-50%);
+  pointer-events:auto;display:inline-flex;align-items:center;gap:.55rem;
+  background:rgba(20,30,25,.5);border:1px solid rgba(218,214,201,.28);
+  color:var(--stone);font-family:var(--mono);font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:.44rem .74rem;cursor:pointer;
+  backdrop-filter:blur(4px);transition:border-color .3s,color .3s,background .3s;
+}
+#bgm-toggle:hover{border-color:var(--campanula);color:#fff}
+#bgm-toggle svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round;flex:none}
+#bgm-toggle #spk{fill:currentColor;stroke:none}
+#bgm-toggle #waves{opacity:0;transition:opacity .3s}
+#bgm-toggle #slash{opacity:1;transition:opacity .3s}
+#bgm-toggle[aria-pressed="true"]{border-color:var(--campanula);color:var(--campanula)}
+#bgm-toggle[aria-pressed="true"] #waves{opacity:1}
+#bgm-toggle[aria-pressed="true"] #slash{opacity:0}
+#bgm-toggle.ducked{opacity:.45}
+@media(max-width:560px){#bgm-label{display:none}#bgm-toggle{padding:.44rem .5rem}}
