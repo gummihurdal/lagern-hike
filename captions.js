@@ -40,7 +40,7 @@ window.QUOTES = {
   "2026-07-25 11-54-09": { t: "&ldquo;God is love&rdquo; is written upon every opening bud, upon every spire of springing grass.", a: "Ellen G. White", s: "Steps to Christ" },
   "2026-07-25 11-54-17": { t: "There is no portion of the world, however minute, that does not exhibit at least some sparks of beauty.", a: "John Calvin", s: "Institutes I.v" },
   "2026-07-25 11-54-27": { t: "With this plant the whole world would seem rich though none other existed.", a: "John Muir", s: "My First Summer in the Sierra" },
-  "2026-07-25 11-54-37": { t: "The green fields, the lofty trees, the buds and flowers &mdash; they speak to our hearts.", a: "Ellen G. White", s: "Steps to Christ" },
+  "2026-07-25 11-54-37": { t: "The green fields, the lofty trees, the buds and flowers, the passing cloud, the falling rain, the babbling brook, the glories of the heavens, speak to our hearts, and invite us to become acquainted with Him who made them all.", a: "Ellen G. White", s: "Steps to Christ, p. 85" },
   "2026-07-25 11-58-50": { t: "Deus creavit, Linnaeus disposuit. &mdash; God created, Linnaeus arranged.", a: "Carl Linnaeus", s: "inscribed on his herbarium" },
   "2026-07-25 12-08-40": { t: "Then it seemed to me that the Sierra should be called, not the Nevada or Snowy Range, but the Range of Light.", a: "John Muir", s: "The Yosemite" },
   "2026-07-25 12-10-46": { t: "Every man looks at his wood-pile with a kind of affection.", a: "Henry David Thoreau", s: "Walden" },
