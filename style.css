@@ -276,3 +276,18 @@ html.presenting .chapter-head,html.presenting .prologue{opacity:.3;transition:op
 @media(prefers-reduced-motion:reduce){
   html.presenting figure{transition:none}
 }
+
+/* ───────── pull quotes on the plant frames ───────── */
+.pullquote{
+  margin:1.3rem 0 0;padding:0 0 0 clamp(.9rem,2.5vw,1.4rem);
+  border-left:2px solid var(--campanula);max-width:34rem;
+}
+.pullquote p{
+  margin:0 0 .6rem;font-size:1.02rem;line-height:1.62;color:#EFEBE1;
+  font-weight:300;text-wrap:pretty;
+}
+.pullquote footer{
+  font-family:var(--mono);font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--campanula);display:flex;gap:.55rem;flex-wrap:wrap;align-items:baseline;
+}
+.pullquote footer span{color:var(--stone-dim);text-transform:none;letter-spacing:.04em;font-style:italic}

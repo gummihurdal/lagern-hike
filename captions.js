@@ -34,3 +34,28 @@ window.CAPTIONS = {
   // The frames from 12:22 onward are in the gallery with their real time
   // and altitude, but no written comment yet.
 };
+
+/* Quotes on the flower and plant frames. One per frame.
+   Rendered as a pull-quote beneath the photo, separate from the caption.
+   Deliberately omitted: the Luther "God writes the gospel on trees and flowers"
+   line and Kepler's "thinking God's thoughts after him" — both circulate widely
+   but neither traces to a primary source. */
+
+window.QUOTES = {
+  /* Campanula on the limestone, 11:54 */
+  "2026-07-25 11-54-09": { t: "&ldquo;God is love&rdquo; is written upon every opening bud, upon every spire of springing grass.", a: "Ellen G. White", s: "Steps to Christ" },
+  "2026-07-25 11-54-17": { t: "There is no portion of the world, however minute, that does not exhibit at least some sparks of beauty.", a: "John Calvin", s: "Institutes I.v" },
+  "2026-07-25 11-54-27": { t: "The world is charged with the grandeur of God.", a: "Gerard Manley Hopkins", s: "God&rsquo;s Grandeur" },
+  "2026-07-25 11-54-37": { t: "The green fields, the lofty trees, the buds and flowers, the passing cloud, the falling rain, the babbling brook &mdash; they speak to our hearts.", a: "Ellen G. White", s: "Steps to Christ" },
+
+  /* Spindle and the berry frames */
+  "2026-07-25 11-58-50": { t: "Deus creavit, Linnaeus disposuit. &mdash; God created, Linnaeus arranged.", a: "Carl Linnaeus", s: "inscribed on his herbarium" },
+  "2026-07-25 12-40-48": { t: "On every leaf of the forest and stone of the mountains, in every shining star, in earth and sea and sky, God&rsquo;s name was written.", a: "Ellen G. White", s: "Education, ch. 2" },
+  "2026-07-25 12-49-09": { t: "I questioned the earth, the sea, the sky &mdash; and they answered that they did not make themselves. Their beauty is their confession.", a: "Augustine", s: "Confessions X" },
+  "2026-07-25 13-54-21": { t: "God gives us two books &mdash; the Scriptures, and the book of His works. We should not stop reading either.", a: "Francis Bacon", s: "" },
+  "2026-07-25 13-54-30": { t: "God is strong enough to exult in monotony. It may be that He says every morning to the sun, &lsquo;Do it again.&rsquo;", a: "G. K. Chesterton", s: "Orthodoxy" },
+  "2026-07-25 14-29-33": { t: "As we come close to the heart of nature, Christ makes His presence real to us.", a: "Ellen G. White", s: "Christ&rsquo;s Object Lessons, ch. 1" },
+  "2026-07-25 14-29-34": { t: "God has so magnificently adorned the world that we are not merely spectators of this beautiful theatre, but enjoy its abundance.", a: "John Calvin", s: "Commentary on Genesis" },
+  "2026-07-25 14-29-35": { t: "The things of nature are the Lord&rsquo;s silent ministers, given to us to teach us spiritual truths.", a: "Ellen G. White", s: "" },
+  "2026-07-25 14-29-37 (2)": { t: "Nature and revelation alike testify of God&rsquo;s love. Our Father in heaven is the source of life, of wisdom, and of joy.", a: "Ellen G. White", s: "Steps to Christ, ch. 1" }
+};

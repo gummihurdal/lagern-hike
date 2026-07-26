@@ -49,21 +49,36 @@
     fig.classList.add('pres-on');
     frames.forEach((f, n) => { if (n !== i) f.classList.remove('pres-on'); });
 
+    /* warm up the next clip so it's ready when we reach it */
+    const nxt = frames[i + 1] && frames[i + 1].querySelector('video');
+    if (nxt) { try { nxt.load(); } catch (e) {} }
+
     const vid = fig.querySelector('video');
     if (vid) {
       timer = setTimeout(() => {
         if (!running) return;
-        vid.muted = false;
-        vid.currentTime = 0;
-        const advance = () => { if (running) next(); };
+        let done = false;
+        const advance = () => { if (!done && running) { done = true; next(); } };
         const cap = setTimeout(advance, VIDEO_CAP);
         vid.addEventListener('ended', advance, { once: true });
         cleanupVideo = () => {
           clearTimeout(cap);
           vid.removeEventListener('ended', advance);
-          vid.pause();
+          try { vid.pause(); } catch (e) {}
         };
-        vid.play().catch(() => { clearTimeout(cap); advance(); });
+        try { vid.currentTime = 0; } catch (e) {}
+        vid.muted = false;
+        vid.play()
+          .catch(() => {
+            /* unmuted blocked — try muted rather than losing the clip */
+            vid.muted = true;
+            return vid.play();
+          })
+          .catch(() => {
+            /* still refused: hold the poster briefly, then carry on */
+            clearTimeout(cap);
+            timer = setTimeout(advance, 3000);
+          });
       }, SETTLE);
     } else {
       timer = setTimeout(() => { if (running) next(); }, SETTLE + PHOTO_HOLD);
@@ -72,9 +87,27 @@
 
   const next = () => { clear(); idx + 1 < frames.length ? show(idx + 1) : stop(true); };
 
+  let unlocked = false;
+  function unlockVideos() {
+    /* Must run synchronously inside the click. Playing each clip muted for an
+       instant, then pausing, is what buys permission to play them later from a
+       timer — otherwise autoplay policy blocks every one. */
+    if (unlocked) return;
+    unlocked = true;
+    document.querySelectorAll('video').forEach(v => {
+      v.muted = true;
+      const pr = v.play();
+      if (pr && pr.then) pr.then(() => { v.pause(); try { v.currentTime = 0; } catch (e) {} })
+                           .catch(() => {});
+      else { try { v.pause(); } catch (e) {} }
+    });
+  }
+
   async function start() {
     if (!frames.length) frames = window.FRAMES || [];
     if (!frames.length) return;
+    unlockVideos();
+    if (window.BGM && window.BGM.available()) window.BGM.on();
     running = true;
     bar.classList.add('playing');
     label.textContent = 'Stop';
@@ -83,7 +116,6 @@
 
     try { if (document.documentElement.requestFullscreen && !document.fullscreenElement)
             await document.documentElement.requestFullscreen(); } catch (e) {}
-    if (window.BGM && window.BGM.available()) window.BGM.on();
 
     show(0);
   }

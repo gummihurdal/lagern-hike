@@ -44,7 +44,8 @@
         const v = document.createElement('video');
         v.src = 'vid/' + it.slug + '.mp4';
         v.poster = 'thumb/' + it.slug + '.jpg';
-        v.controls = true; v.playsInline = true; v.preload = 'none';
+        v.controls = true; v.playsInline = true; v.preload = 'metadata';
+        v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline','');
         v.setAttribute('aria-label', 'Clip at ' + it.time);
         shot.appendChild(v);
         const hint = document.createElement('div');
@@ -71,6 +72,15 @@
         (it.lat ? `<span>${it.lat.toFixed(4)}, ${it.lon.toFixed(4)}</span>` : '') +
         `</div>` + (text ? `<p>${text}</p>` : '');
       fig.appendChild(cap);
+
+      const q = (window.QUOTES || {})[it.id];
+      if (q) {
+        const bq = document.createElement('blockquote');
+        bq.className = 'pullquote';
+        bq.innerHTML = '<p>' + q.t + '</p><footer>' + q.a +
+          (q.s ? '<span>' + q.s + '</span>' : '') + '</footer>';
+        fig.appendChild(bq);
+      }
 
       wrap.appendChild(fig);
       sections.push(fig);
