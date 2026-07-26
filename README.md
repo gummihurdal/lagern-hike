@@ -53,6 +53,6 @@ Stills re-encoded to 2000 px JPEG, clips from 4K HEVC to 1080p30 H.264 with
 
 ## Music
 
-*Eternal Hope* by Kevin MacLeod (incompetech.com), licensed under
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Attribution is
-required and must stay visible — it is in the page footer. Do not remove it.
+Background track supplied by the site owner. The music control appears only if
+`audio/track.mp3` is present; the page is safe to ship without it. Change
+`TRACK` at the top of `music.js` to use a different filename.
