@@ -208,3 +208,30 @@ footer a:hover{color:var(--campanula)}
   .legs li{grid-template-columns:3.6rem 1fr;gap:.8rem}
   .leg-n{font-size:.84rem}
 }
+
+/* ───────── prologue: the stretch with no photographs ───────── */
+.prologue{padding:clamp(4rem,13vh,9rem) var(--gut) 0}
+.pro-inner{
+  max-width:36rem;position:relative;
+  padding-left:clamp(1.1rem,3vw,2rem);
+  border-left:1px solid rgba(124,107,188,.45);
+}
+.pro-eyebrow{
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--campanula);margin:0 0 .9rem;
+}
+.prologue h2{
+  font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.03em;
+  font-size:clamp(1.6rem,5vw,2.7rem);line-height:1.02;margin:0 0 .7rem;
+}
+.pro-note{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;color:var(--stone-dim);
+  margin:0 0 2rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(218,214,201,.14);
+}
+.prologue p{font-size:1rem;line-height:1.72;color:#E6E2D8;margin:0 0 1.15rem}
+.pro-handoff{
+  font-family:var(--mono);font-size:.72rem;line-height:1.6;letter-spacing:.03em;
+  color:var(--haze);margin-top:1.9rem;padding-top:1.3rem;
+  border-top:1px solid rgba(218,214,201,.14);
+}
+@media(min-width:900px){.prologue{padding-left:var(--gut)}}
