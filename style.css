@@ -189,3 +189,8 @@ footer p{margin:.5rem 0;font-size:.9rem;color:var(--stone-dim)}
 #bgm-toggle[aria-pressed="true"] #slash{opacity:0}
 #bgm-toggle.ducked{opacity:.45}
 @media(max-width:560px){#bgm-label{display:none}#bgm-toggle{padding:.44rem .5rem}}
+footer .credit{font-size:.8rem;color:var(--stone-dim);margin-top:1.6rem;
+  padding-top:1.2rem;border-top:1px solid rgba(218,214,201,.12)}
+footer .credit em{font-style:normal;color:var(--stone)}
+footer a{color:var(--haze);text-decoration:underline;text-underline-offset:3px}
+footer a:hover{color:var(--campanula)}
