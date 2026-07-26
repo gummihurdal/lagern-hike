@@ -19,7 +19,7 @@ window.CAPTIONS = {
   "2026-07-25 11-54-37": "Scattered across the woodland floor among last autumn's leaves.",
   "2026-07-25 11-58-50": "Spindle berries — those coral capsules split open to bright orange seeds. Pretty, and thoroughly poisonous.",
   "2026-07-25 12-08-40": "Just past 12:08 the ridge stops being a hill and becomes an edge.",
-  "2026-07-25 12-08-42": "Out on the rock nose, framed by oak.",
+  "2026-07-25 12-08-42": "&ldquo;This is too much,&rdquo; she says &mdash; and then the sigh. Out on the rock nose at 720 m, framed by oak, with the ridge still climbing ahead of her.",
   "2026-07-25 12-10-46": "The bare spine of the trail lifting away through the scrub.",
 
   // ── The narrow bit ──────────────────────────────────────────────
