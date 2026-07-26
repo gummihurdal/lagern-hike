@@ -66,22 +66,12 @@
       fig.appendChild(shot);
 
       const text = CAP[it.id];
-      /* Sound lifted from the clip itself, shown as a transcript line under the
-         video: the spoken words verbatim, or a note where there are none. */
-      const heard = it.video ? (window.AUDIO || {})[it.id] : null;
       const cap = document.createElement('figcaption');
-      if (!text && !heard) cap.className = 'bare';
+      if (!text) cap.className = 'bare';
       cap.innerHTML =
         `<div class="meta"><span>${it.time}</span><b>${Math.round(it.alt)} m</b>` +
         (it.lat ? `<span>${it.lat.toFixed(4)}, ${it.lon.toFixed(4)}</span>` : '') +
-        `</div>` + (text ? `<p>${text}</p>` : '') +
-        (heard ?
-          `<p class="heard"><svg class="wv" viewBox="0 0 28 16" aria-hidden="true">` +
-            `<rect x="1" y="6" width="2" height="4" rx="1"/><rect x="5" y="3" width="2" height="10" rx="1"/>` +
-            `<rect x="9" y="1" width="2" height="14" rx="1"/><rect x="13" y="5" width="2" height="6" rx="1"/>` +
-            `<rect x="17" y="2" width="2" height="12" rx="1"/><rect x="21" y="6" width="2" height="4" rx="1"/>` +
-            `<rect x="25" y="4" width="2" height="8" rx="1"/></svg>` +
-          `<span class="heard-tx">${heard}</span></p>` : '');
+        `</div>` + (text ? `<p>${text}</p>` : '');
       fig.appendChild(cap);
 
       /* Dwell is proportional to reading load: a long psalm gets longer on

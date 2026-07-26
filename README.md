@@ -43,10 +43,10 @@ computing anything.
 ## Editing the commentary
 
 Written comments live in `captions.js`, keyed by original filename. Frames
-without an entry still appear, showing their real time and altitude. The same
-file holds `QUOTES` (a pull-quote shown only on the flower/berry close-ups and
-the two Planetenweg boards) and `AUDIO` (the sound lifted from each video clip,
-shown as a transcript line beneath it).
+without an entry still appear, showing their real time and altitude. The video
+captions include what is said in each clip. The same file holds `QUOTES` — a
+pull-quote shown only on the flower/berry close-ups and the two Planetenweg
+boards.
 
 ## Media
 

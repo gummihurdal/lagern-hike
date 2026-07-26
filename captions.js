@@ -1,32 +1,30 @@
 /* Commentary for the Lägern presentation, keyed by original frame id.
-   - CAPTIONS: one line per frame, describing what is in the photograph.
+   - CAPTIONS: one line per frame, describing what is in the photograph or
+               (for the video clips) what is seen and said in it.
    - QUOTES:   a pull-quote, shown ONLY on the flower/berry close-ups and the
                two Planetenweg boards (Uranus, Jupiter) — never over a person.
-   - AUDIO:    the sound pulled from each video clip, shown as a transcript
-               line beneath it (verbatim speech, or a note when there are no words).
    - PLANT_FRAMES: frames that hold a beat longer in the auto-presentation. */
 
 window.CAPTIONS = {
   "2026-07-25 11-08-13": "Eight past eleven, 470 metres, and already off the tarmac. The Lägern doesn't bother with a warm-up — the path leaves Baden and goes straight up through the oaks.",
-  "2026-07-25 12-40-48": "Lords-and-ladies gone to seed &mdash; a spike of berries ripening from green through orange to red, lit against the brown leaf-litter.",
-  "2026-07-25 13-54-21": "A single oxeye daisy on its thin stem, holding its own among the dry grass and broken limestone.",
   "2026-07-25 11-27-29": "A hiker steps down onto the trail between the trees, poles planted, visor pulled low against the glare.",
   "2026-07-25 11-28-12": "Twenty minutes in, and you can hear her sighing. At this point the route still looked like more than she had signed up for &mdash; the path narrowing onto the flank, white rock underfoot, a persuasive drop on the right. She was on the crest at 12:13 and at the high point by half past one.",
   "2026-07-25 11-32-25": "Four minutes after the sighing, and not a sound out of her. Roots doing the work of stairs, and she goes up them like they are nothing. Easy, as it turns out.",
-  "2026-07-25 11-38-06": "A long sigh, loud enough for the microphone &mdash; and then she spots the camera. Behind her, the first proper gap in the canopy, and the plain already going hazy in the heat.",
-  "2026-07-25 11-39-17": "Another sigh, and then the verdict. Shot at 120 frames a second, so the slab she is objecting to gets the slow motion it deserves.",
+  "2026-07-25 11-38-06": "A long sigh, loud enough for the microphone &mdash; and then she spots the camera. &ldquo;Oh no, stop it.&rdquo; Behind her, the first proper gap in the canopy, and the plain already going hazy in the heat.",
+  "2026-07-25 11-39-17": "Another sigh, and then the verdict: &ldquo;Can we not go somewhere like this next time?&rdquo; Shot at 120 frames a second, so the slab she is objecting to gets the slow motion it deserves.",
   "2026-07-25 11-54-17": "A better clump of them.",
   "2026-07-25 11-58-50": "Spindle berries — those coral capsules split open to bright orange seeds. Pretty, and thoroughly poisonous.",
   "2026-07-25 12-08-40": "Just past 12:08 the ridge stops being a hill and becomes an edge.",
-  "2026-07-25 12-08-42": "The sigh comes first, drawn all the way out. Out on the rock nose at 720 m, framed by oak, with the ridge still climbing ahead of her.",
+  "2026-07-25 12-08-42": "The sigh comes first. Then, drawn all the way out: &ldquo;This is toooo muchhh.&rdquo; Out on the rock nose at 720 m, framed by oak, with the ridge still climbing ahead of her.",
   "2026-07-25 12-13-22": "Standing on the crest with air on both sides.",
   "2026-07-25 12-13-29": "Sky overhead, oak leaves, and not much width to spare.",
-  "2026-07-25 12-13-59": "A long sigh, and then, twice, with feeling. She walks it anyway &mdash; no hands needed along here, but you do watch your feet.",
-  "2026-07-25 12-16-46": "One arm out for balance, picking her way down the awkward bit &mdash; and this is where she delivers the line of the day.",
+  "2026-07-25 12-13-59": "A long sigh, and then, twice, with feeling: &ldquo;There is no way. There is <em>no way</em>.&rdquo; She walks it anyway. No hands needed along here, but you do watch your feet.",
+  "2026-07-25 12-16-46": "One arm out for balance, picking her way down the awkward bit &mdash; and this is where she delivers the line of the day: &ldquo;Every man who would marry me is like winning in the lottery.&rdquo;",
   "2026-07-25 12-22-47": "A dead tree in the foreground, and beyond it the villages and stubble-fields of the Mittelland fading into haze.",
   "2026-07-25 12-22-55": "Nine minutes after &ldquo;there is no way,&rdquo; this. Up on the narrow section with the whole plain behind her, grinning, lit up &mdash; and the hard part of the morning suddenly worth it.",
   "2026-07-25 12-25-45": "The crest narrows to a fin of pale rock, hazel and oak crowding in, the town just visible through the gap.",
   "2026-07-25 12-29-20": "The bare rock crest tilted on end, a tree rooted in the seam, the trail scratched along its lower edge.",
+  "2026-07-25 12-40-48": "Lords-and-ladies gone to seed &mdash; a spike of berries ripening from green through orange to red, lit against the brown leaf-litter.",
   "2026-07-25 12-43-31": "Coming on down the leaf-littered avenue, poles planted wide, grinning into the camera.",
   "2026-07-25 12-43-45": "Following on up the dappled track, the beeches closing overhead, litter soft underfoot.",
   "2026-07-25 12-57-31": "A second and a half of nothing much &mdash; the camera swinging past hazel and the stony path as we press on.",
@@ -35,6 +33,7 @@ window.CAPTIONS = {
   "2026-07-25 13-12-03": "The two of us at the top, sun and sweat, the plain going to haze past her shoulder.",
   "2026-07-25 13-14-22": "Sloes coming on in the blackthorn, still hard and blue-black, white limestone breaking through behind.",
   "2026-07-25 13-24-12": "Bright red honeysuckle berries strung among the leaves, one or two already gone dark.",
+  "2026-07-25 13-54-21": "A single oxeye daisy on its thin stem, holding its own among the dry grass and broken limestone.",
   "2026-07-25 14-36-21": "Still grinning, the flowered flask and her visor set down on the boards beside the menus.",
   "2026-07-25 15-34-42": "And the long view: the Mittelland in tiers of haze, a strip of lake, the Alps just ghosted along the top.",
   "2026-07-25 15-38-00": "One of the planet-trail boards. The Regensberg Planetenweg runs the length of the ridge &mdash; Pluto out at Burghorn, the Sun down in the village. This is Uranus, still a good way from lunch.",
@@ -54,18 +53,6 @@ window.QUOTES = {
   "2026-07-25 13-54-21": { t: "So much of nature as he is ignorant of, so much of his own mind does he not yet possess.", a: "Ralph Waldo Emerson", s: "Essays" },
   "2026-07-25 15-38-00": { t: "This most beautiful system of the sun, planets, and comets could only proceed from the counsel and dominion of an intelligent and powerful Being.", a: "Isaac Newton", s: "Principia, General Scholium" },
   "2026-07-25 16-52-18": { t: "The heavens declare the glory of God; and the firmament sheweth his handywork.", a: "Psalm 19:1" },
-};
-
-window.AUDIO = {
-  "2026-07-25 11-28-12": "[a long breath, then a sigh]",
-  "2026-07-25 11-32-25": "[quiet &mdash; footfalls and the wind]",
-  "2026-07-25 11-38-06": "&ldquo;Oh no &mdash; stop it.&rdquo;",
-  "2026-07-25 11-39-17": "&ldquo;Can we not go somewhere like this next time?&rdquo;",
-  "2026-07-25 12-08-42": "&ldquo;This is <em>toooo</em> much.&rdquo;",
-  "2026-07-25 12-13-22": "[a murmur, half lost to the wind]",
-  "2026-07-25 12-13-59": "&ldquo;There&rsquo;s no way. There&rsquo;s <em>no way</em>&hellip; how do we get through that?&rdquo;",
-  "2026-07-25 12-16-46": "&ldquo;Every man who would marry me is like winning in the lottery.&rdquo;",
-  "2026-07-25 12-57-31": "[half a breath &mdash; no words]",
 };
 
 window.PLANT_FRAMES = [
