@@ -194,3 +194,17 @@ footer .credit{font-size:.8rem;color:var(--stone-dim);margin-top:1.6rem;
 footer .credit em{font-style:normal;color:var(--stone)}
 footer a{color:var(--haze);text-decoration:underline;text-underline-offset:3px}
 footer a:hover{color:var(--campanula)}
+
+/* ───────── route legs ───────── */
+.legs{list-style:none;margin:0 0 2.6rem;padding:0;max-width:34rem;
+  counter-reset:leg;display:flex;flex-direction:column;gap:.1rem}
+.legs li{display:grid;grid-template-columns:4.6rem 1fr;gap:1rem;align-items:baseline;
+  padding:.7rem 0;border-top:1px solid rgba(218,214,201,.14)}
+.legs li:last-child{border-bottom:1px solid rgba(218,214,201,.14)}
+.leg-d{font-family:var(--mono);font-size:.74rem;font-weight:500;color:var(--campanula);
+  letter-spacing:.04em;text-align:right}
+.leg-n{font-size:.9rem;color:#DCD8CD;line-height:1.45}
+@media(max-width:480px){
+  .legs li{grid-template-columns:3.6rem 1fr;gap:.8rem}
+  .leg-n{font-size:.84rem}
+}

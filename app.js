@@ -82,7 +82,7 @@
 
   document.getElementById('footStats').textContent =
     `${items.length} frames · ${items.filter(i => i.video).length} clips · ` +
-    `11:08–15:34 · 470–847 m`;
+    `first 11:08 at 470 m · last 15:34 at 839 m`;
 
   /* ---------- elevation profile ---------- */
   const pts = items.map((it, i) => ({ x: i / (items.length - 1), a: it.alt }));
