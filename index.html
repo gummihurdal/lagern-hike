@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lägern — a ridge traverse, 25 July 2026</title>
+<meta name="description" content="Six and a half kilometres along the Lägerngrat, from Baden at 470 m to the high point at 847 m.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Spline+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- elevation spine -->
+<div id="spine" aria-hidden="true">
+  <svg id="profile" viewBox="0 0 1000 120" preserveAspectRatio="none">
+    <path id="profileFill"></path>
+    <path id="profileLine"></path>
+    <line id="cursor" y1="0" y2="120"></line>
+  </svg>
+  <div id="readout">
+    <span id="roAlt">470 m</span>
+    <span id="roTime">11:08</span>
+  </div>
+</div>
+
+<header id="hero">
+  <div class="hero-media"><img id="heroImg" alt="" fetchpriority="high"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-body">
+    <p class="eyebrow">Aargau / Zürich · Saturday 25 July 2026</p>
+    <h1>Lägern</h1>
+    <p class="lede">A limestone ridge that runs east out of Baden and gets steadily narrower until
+       you're walking on the edge of it.</p>
+    <dl class="facts">
+      <div><dt>Distance</dt><dd>6.63 <span>km</span></dd></div>
+      <div><dt>Ascent</dt><dd>589 <span>m</span></dd></div>
+      <div><dt>Low → high</dt><dd>470 → 847 <span>m</span></dd></div>
+      <div><dt>On the hill</dt><dd>4:26 <span>h</span></dd></div>
+    </dl>
+    <p class="scrollcue">Scroll</p>
+  </div>
+</header>
+
+<main id="story"></main>
+
+<footer>
+  <p class="mono" id="footStats"></p>
+  <p>Altitudes and coordinates read from the photo EXIF, so they're where the camera actually was.</p>
+</footer>
+
+<script src="captions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

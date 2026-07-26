@@ -1,0 +1,168 @@
+:root{
+  --ink:#141E19;          /* shadowed woodland floor */
+  --ink-2:#1C2A23;
+  --stone:#DAD6C9;        /* pale Jurassic limestone */
+  --stone-dim:#9DA398;
+  --karst:#7E867C;        /* weathered rock */
+  --campanula:#7C6BBC;    /* the bellflowers on the ridge */
+  --haze:#9FB6C0;         /* the plain, going blue */
+  --display:"Archivo Narrow",Arial Narrow,sans-serif;
+  --body:"Spline Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --gut:clamp(1.1rem,4vw,3rem);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--ink);color:var(--stone);
+  font-family:var(--body);font-weight:300;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img,video{display:block;max-width:100%}
+
+.mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--stone-dim)}
+.eyebrow{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--haze);margin:0 0 1.4rem;
+}
+
+/* ───────── elevation spine ───────── */
+#spine{
+  position:fixed;top:0;left:0;right:0;height:64px;z-index:50;
+  background:linear-gradient(to bottom,rgba(20,30,25,.94),rgba(20,30,25,.72));
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(218,214,201,.13);
+  opacity:0;transform:translateY(-100%);
+  transition:opacity .5s ease,transform .5s ease;
+  pointer-events:none;
+}
+#spine.on{opacity:1;transform:none}
+#profile{width:100%;height:64px}
+#profileLine{fill:none;stroke:var(--stone);stroke-width:1.6;vector-effect:non-scaling-stroke}
+#profileFill{fill:rgba(124,107,188,.22)}
+#cursor{stroke:var(--campanula);stroke-width:2;vector-effect:non-scaling-stroke}
+#readout{
+  position:absolute;right:var(--gut);top:50%;transform:translateY(-50%);
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;
+  display:flex;gap:.9rem;align-items:baseline;
+}
+#roAlt{color:var(--campanula);font-weight:500}
+#roTime{color:var(--stone-dim)}
+
+/* ───────── hero ───────── */
+#hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.88) contrast(1.04)}
+.hero-scrim{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(to top,var(--ink) 2%,rgba(20,30,25,.72) 42%,rgba(20,30,25,.18) 78%),
+    linear-gradient(to right,rgba(20,30,25,.62),transparent 62%);
+}
+.hero-body{position:relative;padding:var(--gut);padding-bottom:clamp(2rem,7vh,5rem);max-width:46rem}
+h1{
+  font-family:var(--display);font-weight:700;text-transform:uppercase;
+  font-size:clamp(4rem,18vw,12rem);line-height:.84;letter-spacing:.02em;
+  margin:0 0 1rem;
+}
+.lede{font-size:clamp(1.05rem,2.4vw,1.5rem);font-weight:300;max-width:32rem;margin:0 0 2.4rem;color:#EDEAE0}
+
+.facts{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(7.5rem,1fr));
+  gap:1.4rem 1.8rem;margin:0 0 2.6rem;padding-top:1.6rem;
+  border-top:1px solid rgba(218,214,201,.22);
+}
+.facts dt{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--haze);margin-bottom:.35rem;
+}
+.facts dd{
+  margin:0;font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,4vw,2.1rem);
+  line-height:1;letter-spacing:.01em;
+}
+.facts dd span{font-family:var(--mono);font-size:.7rem;font-weight:400;color:var(--stone-dim);margin-left:.2em}
+.scrollcue{
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--stone-dim);margin:0;
+}
+.scrollcue::after{content:"";display:block;width:1px;height:2.2rem;background:linear-gradient(var(--stone-dim),transparent);margin-top:.6rem}
+
+/* ───────── chapters ───────── */
+.chapter{padding:clamp(4rem,12vh,9rem) 0 0}
+.chapter-head{padding:0 var(--gut);margin-bottom:clamp(2rem,6vh,3.6rem);max-width:44rem}
+.chapter-head .num{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;color:var(--campanula);
+  display:block;margin-bottom:.7rem;
+}
+.chapter-head h2{
+  font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.03em;
+  font-size:clamp(1.9rem,6vw,3.4rem);line-height:1;margin:0 0 .8rem;
+}
+.chapter-head .span{font-family:var(--mono);font-size:.72rem;color:var(--stone-dim)}
+
+/* frames */
+.frames{display:flex;flex-direction:column;gap:clamp(3rem,9vh,6.5rem)}
+figure{margin:0;padding:0 var(--gut)}
+figure.wide{padding:0}
+.shot{position:relative;background:var(--ink-2);overflow:hidden}
+.shot img,.shot video{width:100%;height:auto}
+figure.wide .shot{border-radius:0}
+.shot::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(218,214,201,.1);
+}
+.badge{
+  position:absolute;left:0;bottom:0;z-index:2;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  background:rgba(20,30,25,.82);color:var(--haze);padding:.4rem .7rem;
+  backdrop-filter:blur(4px);
+}
+figcaption{padding-top:1rem;max-width:34rem}
+figcaption .meta{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--stone-dim);
+  display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:.55rem;
+}
+figcaption .meta b{color:var(--campanula);font-weight:500}
+figcaption p{margin:0;font-size:1rem;color:#E6E2D8}
+figcaption.bare .meta{margin-bottom:0}
+
+/* two-up on wide screens for portrait pairs */
+@media(min-width:900px){
+  .frames{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem) clamp(2rem,4vw,3.5rem);
+          padding:0 var(--gut)}
+  figure{padding:0}
+  figure.full{grid-column:1/-1}
+  .chapter-head{padding-left:var(--gut)}
+}
+
+/* video */
+video{background:#000}
+.playhint{
+  position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+}
+.playhint span{
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  border:1px solid rgba(218,214,201,.55);color:var(--stone);padding:.5rem .9rem;
+  background:rgba(20,30,25,.5);backdrop-filter:blur(3px);
+}
+.shot.playing .playhint{display:none}
+
+footer{
+  padding:clamp(5rem,14vh,9rem) var(--gut) clamp(3rem,8vh,5rem);
+  border-top:1px solid rgba(218,214,201,.14);margin-top:clamp(5rem,14vh,9rem);
+  max-width:40rem;
+}
+footer p{margin:.5rem 0;font-size:.9rem;color:var(--stone-dim)}
+
+/* reveal */
+.rise{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rise.in{opacity:1;transform:none}
+
+:focus-visible{outline:2px solid var(--campanula);outline-offset:3px}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rise{opacity:1;transform:none;transition:none}
+  #spine{transition:none}
+}
