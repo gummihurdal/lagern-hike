@@ -80,6 +80,9 @@
     story.appendChild(sec);
   });
 
+  window.FRAMES = sections;
+  document.dispatchEvent(new Event('frames-ready'));
+
   document.getElementById('footStats').textContent =
     `${items.length} frames · ${items.filter(i => i.video).length} clips · ` +
     `first 11:08 at 470 m · last 15:34 at 839 m`;

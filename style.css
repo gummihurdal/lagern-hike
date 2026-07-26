@@ -242,3 +242,37 @@ footer a:hover{color:var(--campanula)}
   border-top:1px solid rgba(218,214,201,.14);
 }
 @media(min-width:900px){.prologue{padding-left:var(--gut)}}
+
+/* ───────── presentation player ───────── */
+#pres-bar{
+  position:fixed;top:clamp(.6rem,2vh,1.1rem);left:50%;transform:translateX(-50%);
+  z-index:70;display:flex;align-items:center;gap:.6rem;
+}
+#pres-toggle{
+  display:inline-flex;align-items:center;gap:.6rem;cursor:pointer;
+  background:rgba(20,30,25,.82);border:1px solid rgba(218,214,201,.4);
+  color:var(--stone);font-family:var(--mono);font-size:.66rem;
+  letter-spacing:.16em;text-transform:uppercase;padding:.6rem 1rem;
+  backdrop-filter:blur(6px);white-space:nowrap;
+  transition:border-color .3s,color .3s,background .3s;
+}
+#pres-toggle:hover{border-color:var(--campanula);color:#fff;background:rgba(20,30,25,.92)}
+#pres-toggle svg{width:14px;height:14px;fill:currentColor;stroke:none;flex:none}
+#pres-stop{display:none}
+#pres-bar.playing #pres-play{display:none}
+#pres-bar.playing #pres-stop{display:inline}
+#pres-bar.playing #pres-toggle{border-color:var(--campanula);color:var(--campanula)}
+#pres-count{
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;color:var(--stone-dim);
+  background:rgba(20,30,25,.72);padding:.5rem .6rem;backdrop-filter:blur(6px);
+}
+
+/* during playback: quiet everything that isn't the current frame */
+html.presenting #spine,html.presenting #bgm-toggle{opacity:0 !important;pointer-events:none}
+html.presenting figure{transition:opacity .5s ease}
+html.presenting .frames figure{opacity:.18}
+html.presenting figure.pres-on{opacity:1}
+html.presenting .chapter-head,html.presenting .prologue{opacity:.3;transition:opacity .5s}
+@media(prefers-reduced-motion:reduce){
+  html.presenting figure{transition:none}
+}

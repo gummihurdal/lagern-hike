@@ -53,6 +53,18 @@
     }
   }
 
+  function setWanted(v) {
+    wanted = v;
+    btn.setAttribute('aria-pressed', String(wanted));
+    if (label) label.textContent = wanted ? 'Music on' : 'Music';
+    apply();
+  }
+  window.BGM = {
+    on:  () => setWanted(true),
+    off: () => setWanted(false),
+    available: () => !btn.hidden
+  };
+
   btn.addEventListener('click', () => {
     wanted = !wanted;
     btn.setAttribute('aria-pressed', String(wanted));
