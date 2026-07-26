@@ -135,6 +135,21 @@ figcaption .meta b{color:var(--campanula);font-weight:500}
 figcaption p{margin:0;font-size:1rem;color:#E6E2D8}
 figcaption.bare .meta{margin-bottom:0}
 
+/* transcript of the sound on a video clip */
+figcaption p.heard{
+  display:flex;align-items:baseline;gap:.55rem;
+  margin-top:.75rem;padding-top:.65rem;
+  border-top:1px solid rgba(218,214,201,.11);
+}
+figcaption p.heard .wv{
+  flex:none;width:1.4rem;height:.8rem;fill:var(--haze);opacity:.8;
+  align-self:center;
+}
+figcaption p.heard .heard-tx{
+  font-family:var(--mono);font-size:.82rem;line-height:1.55;
+  letter-spacing:.01em;color:var(--haze);
+}
+
 /* two-up on wide screens for portrait pairs */
 @media(min-width:900px){
   .frames{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem) clamp(2rem,4vw,3.5rem);

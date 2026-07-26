@@ -11,9 +11,8 @@ Baden to Regensberg, the length of the crest.
 | Hochwacht → Regensberg, Dorf bus stop (617 m) | ~2.5 km |
 | **Total** | **~13.5 km, ≈650 m ascent, 5 h+ walking** |
 
-76 stills and 9 clips, from 88 stills and 9 clips originally. Twelve
-near-identical burst frames were removed by perceptual hash, keeping the
-sharpest frame of each burst.
+95 stills and 9 clips. Near-identical burst frames were removed by perceptual
+hash, keeping the sharpest frame of each burst.
 
 ## Route confirmed
 
@@ -44,7 +43,10 @@ computing anything.
 ## Editing the commentary
 
 Written comments live in `captions.js`, keyed by original filename. Frames
-without an entry still appear, showing their real time and altitude.
+without an entry still appear, showing their real time and altitude. The same
+file holds `QUOTES` (a pull-quote shown only on the flower/berry close-ups and
+the two Planetenweg boards) and `AUDIO` (the sound lifted from each video clip,
+shown as a transcript line beneath it).
 
 ## Media
 
