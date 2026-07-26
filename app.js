@@ -1,5 +1,5 @@
 (async function () {
-  const data = await fetch('data.json').then(r => r.json());
+  const data = await fetch('data.json?v=202607261752').then(r => r.json());
   const { chapters, items } = data;
   const CAP = window.CAPTIONS || {};
   const story = document.getElementById('story');
