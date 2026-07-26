@@ -317,3 +317,32 @@ html.presenting figure.pres-on .shot::after{box-shadow:none}
 html.presenting figcaption,html.presenting .pullquote{opacity:0;transition:opacity .45s ease .15s}
 html.presenting figure.pres-on figcaption,
 html.presenting figure.pres-on .pullquote{opacity:1}
+
+/* ───────── title and end cards ───────── */
+.pres-card{
+  position:fixed;inset:0;z-index:75;display:grid;place-items:center;
+  background:#0E1512;padding:var(--gut);
+  opacity:0;transition:opacity .9s ease;pointer-events:none;
+}
+.pres-card.on{opacity:1}
+.card-inner{max-width:44rem;text-align:left;border-left:2px solid var(--campanula);
+  padding-left:clamp(1.2rem,3.5vw,2.4rem)}
+.card-eyebrow{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--haze);margin:0 0 1.5rem;
+}
+.card-title{
+  font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.02em;
+  font-size:clamp(3.4rem,14vw,9rem);line-height:.86;margin:0 0 1.3rem;color:var(--stone);
+}
+.card-sub{font-size:clamp(1.05rem,2.6vw,1.5rem);font-weight:300;color:#F1EEE5;margin:0 0 2.2rem;line-height:1.45}
+.card-route{font-size:clamp(.9rem,2vw,1.05rem);font-weight:300;color:#DCD8CD;margin:0 0 1.8rem;line-height:1.7}
+.card-stats{
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.09em;color:var(--campanula);
+  margin:0;padding-top:1.4rem;border-top:1px solid rgba(218,214,201,.18);
+}
+.card-credit{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;color:var(--stone-dim);
+  margin:1.6rem 0 0;line-height:1.7;
+}
+.card-credit em{font-style:italic;color:var(--stone)}

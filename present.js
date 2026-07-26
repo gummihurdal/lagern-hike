@@ -7,6 +7,8 @@
    all. Nothing here can start on its own, by design.
 */
 (function () {
+  const TITLE_HOLD = 6000;      // ms on the opening card
+  const END_HOLD   = 9000;      // ms on the closing card
   const PHOTO_HOLD = 4800;      // ms a still stays on screen
   const SETTLE     = 620;       // ms allowed for the smooth scroll to land
   const VIDEO_CAP  = 30000;     // ms failsafe if a clip never fires 'ended'
@@ -42,6 +44,14 @@
   const count = bar.querySelector('#pres-count');
 
   document.addEventListener('frames-ready', () => { frames = window.FRAMES || []; });
+
+  const titleCard = document.getElementById('pres-title');
+  const endCard   = document.getElementById('pres-end');
+  function card(el, on) {
+    if (!el) return;
+    if (on) { el.hidden = false; requestAnimationFrame(() => el.classList.add('on')); }
+    else { el.classList.remove('on'); setTimeout(() => { el.hidden = true; }, 900); }
+  }
 
   /* ---------- helpers ---------- */
   const clear = () => { clearTimeout(timer); timer = null;
@@ -131,7 +141,21 @@
     }
   }
 
-  const next = () => { clear(); idx + 1 < frames.length ? show(idx + 1) : stop(true); };
+  const next = () => {
+    clear();
+    if (titlePending) { titlePending = false; card(titleCard, false); return show(0); }
+    if (idx + 1 < frames.length) return show(idx + 1);
+    /* close on the end card rather than stopping dead */
+    if (!endPending) {
+      endPending = true;
+      frames.forEach(f => f.classList.remove('pres-on'));
+      card(endCard, true);
+      startHold(END_HOLD);
+      return;
+    }
+    stop(true);
+  };
+  let endPending = false;
   const prev = () => { clear(); show(Math.max(0, idx - 1)); };
 
   let unlocked = false;
@@ -164,11 +188,16 @@
     try { if (document.documentElement.requestFullscreen && !document.fullscreenElement)
             await document.documentElement.requestFullscreen(); } catch (e) {}
 
-    show(0);
+    card(titleCard, true);
+    startHold(TITLE_HOLD);
+    titlePending = true;
   }
+  let titlePending = false;
 
   function stop(finished) {
     running = false; paused = false;
+    titlePending = false; endPending = false;
+    card(titleCard, false); card(endCard, false);
     cancelAnimationFrame(rafId);
     badge.hidden = true;
     document.documentElement.classList.remove('pres-paused');
